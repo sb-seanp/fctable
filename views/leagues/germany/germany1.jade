@@ -1,0 +1,29 @@
+extends ../../layout
+block content
+    .well.league-container
+        table.table.table-striped.table-hover.league-table
+            thead
+                tr
+                    th Position
+                    th Club
+                    th Played
+                    th Win
+                    th Draw
+                    th Loss
+                    th For
+                    th Against
+                    th Diff
+                    th Points
+            tbody
+                each club, i in germany1
+                    tr
+                        td #{club.pos}
+                        td #{club._id}
+                        td #{club.played}
+                        td #{club.wins}
+                        td #{club.draws}
+                        td #{club.losses}
+                        td #{club.gfor}
+                        td #{club.gag}
+                        td #{club.gd}
+                        td #{club.points}

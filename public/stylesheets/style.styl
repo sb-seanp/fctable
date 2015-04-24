@@ -1,6 +1,7 @@
 @import 'nib'
 
 red         = #F44336
+dark_red    = #B71C1C
 pink        = #E91E63
 plum        = #563E58
 purple      = #9C27B0
@@ -45,7 +46,7 @@ nav
 .navbar-nav
   margin 0 auto
 .navbar-default.navbar
-  background-color blue
+  background-color dark_red
 .navbar .navbar-nav > li > a
   font-size large
   color white
@@ -67,7 +68,23 @@ nav
       color black!important
   & li>a:hover
     color black!important
+  & li>a:focus
+    color black!important
 .nav-tabs .active
   box-shadow inset 0px -4px 0px 0px pink
 .hvr-underline-reveal:before
   background pink
+
+// CONTENT
+.league-container
+  max-width 860px
+  position relative
+  top 35px
+  margin 0 auto
+.league-logo
+  position relative
+  display block
+  height 95px
+  width auto
+  top 18px
+  margin 0 auto
