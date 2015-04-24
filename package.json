@@ -1,9 +1,24 @@
 {
   "name": "fctable",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "League table website using fcscraper.",
+  "homepage": "http://www.fctable.com",
+  "bugs": {
+    "url": "http://github.com/sb-seanp/fctable/issues",
+    "email": "contact@wulfcode.com"
+  },
+  "author": {
+    "name": "Sean Prasertsit",
+    "email": "sean@prasertsit.com",
+    "url": "http://wulfcode.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/sb-seanp/fctable.git"
+  },
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/fctable"
   },
   "dependencies": {
     "express": "~4.9.0",
@@ -13,5 +28,7 @@
     "serve-favicon": "~2.1.3",
     "debug": "~2.0.0",
     "jade": "~1.6.0"
+  },
+  "devDependencies": {
   }
 }

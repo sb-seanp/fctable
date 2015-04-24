@@ -1,0 +1,21 @@
+{
+  "name": "fctable",
+  "version": "1.0.0",
+  "homepage": "http://www.fctable.com",
+  "authors": [
+    "Sean Prasertsit <sean@prasertsit.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/sb-seanp/fctable.git"
+  },
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
