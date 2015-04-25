@@ -46,4 +46,24 @@ router.get('/italy/1', function (req, res) {
   });
 });
 
+router.get('/france/1', function (req, res) {
+  var db = req.db;
+  var collection = db.get('france1');
+  collection.find({}, {}, function (e, docs) {
+    res.render('\\leagues\\france\\france1', {
+      "france1": docs
+    });
+  });
+});
+
+router.get('/portugal/1', function (req, res) {
+  var db = req.db;
+  var collection = db.get('portugal1');
+  collection.find({}, {}, function (e, docs) {
+    res.render('\\leagues\\portugal\\portugal1', {
+      "portugal1": docs
+    });
+  });
+});
+
 module.exports = router;

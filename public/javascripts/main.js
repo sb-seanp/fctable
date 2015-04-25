@@ -26,6 +26,8 @@ Ui.setHeaderBackground = function(first) {
     if (first == 'spain') $('.navbar-default.navbar').css('background-color', '#FFDF00');
     if (first == 'germany') $('.navbar-default.navbar').css('background-color', '#CD0001');
     if (first == 'italy') $('.navbar-default.navbar').css('background-color', '#317031');
+    if (first == 'france') $('.navbar-default.navbar').css('background-color', '#4D5C64');
+    if (first == 'portugal') $('.navbar-default.navbar').css('background-color', '##D9030F');
 };
 
 Ui.setActiveTab = function(first) {
