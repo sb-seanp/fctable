@@ -1,7 +1,9 @@
 doctype html
 html
     head
-        title FCTable
+        block title
+            title fctable
+        meta(charset='utf-8')
         link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.css')
         link(rel='stylesheet', href='/bower_components/bootstrap-material-design/dist/css/material.css')
         link(rel='stylesheet', href='/bower_components/bootstrap-material-design/dist/css/ripples.css')
@@ -9,9 +11,11 @@ html
         link(rel='stylesheet', href='/bower_components/Hover/css/hover.css')
         link(rel='stylesheet', href='/stylesheets/style.css')
     body
-        include header
+        block header
         include tabs
-        block content
+        #content
+            block content
+        include footer
 
         script(type='text/javascript', src='/bower_components/jquery/dist/jquery.js')
         script(type='text/javascript', src='/bower_components/bootstrap/dist/js/bootstrap.js')

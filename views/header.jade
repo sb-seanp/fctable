@@ -1,9 +1,10 @@
 header
-    nav.navbar.navbar-default
+    nav.navbar.navbar-default.navbar-fixed-top
         .max-width
             .navbar-header
                 button.navbar-toggle(type='button' data-toggle='collapse' data-target='.navbar-responsive-collapse')
                     span.mdi-navigation-menu
                 a.navbar-brand(href='/') fctable
             .navbar-collapse.collapse.navbar-responsive-collapse
-                ul.nav.navbar-nav
+                ul.nav.navbar-nav.navbar-right
+                    block header-right
