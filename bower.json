@@ -23,6 +23,7 @@
     "bootstrap": "~3.3.4",
     "bootstrap-material-design": "~0.3.0",
     "Hover": "~2.0.2",
-    "jquery.tablesorter": "~2.21.5"
+    "jquery.tablesorter": "~2.21.5",
+    "animate.css": "~3.2.6"
   }
 }

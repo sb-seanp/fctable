@@ -4,23 +4,56 @@ html
         block title
             title fctable
         meta(charset='utf-8')
-        link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.css')
-        link(rel='stylesheet', href='/bower_components/bootstrap-material-design/dist/css/material.css')
-        link(rel='stylesheet', href='/bower_components/bootstrap-material-design/dist/css/ripples.css')
-        link(rel='stylesheet', href='/bower_components/bootstrap-material-design/dist/css/roboto.css')
-        link(rel='stylesheet', href='/bower_components/Hover/css/hover.css')
+        //
+            link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.css')
+            link(rel='stylesheet', href='/bower_components/bootstrap-material-design/dist/css/material.css')
+            link(rel='stylesheet', href='/bower_components/bootstrap-material-design/dist/css/ripples.css')
+            link(rel='stylesheet', href='/bower_components/bootstrap-material-design/dist/css/roboto.css')
+            link(rel='stylesheet', href='/bower_components/Hover/css/hover.css')
+            link(rel='stylesheet', href='/bower_components/animate.css/animate.css')
+            link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3' +
+        '.0/css/material.min.css')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3' +
+        '.0/css/material.min.css.map')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3' +
+        '.0/css/ripples.min.css')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3' +
+        '.0/css/ripples.min.css.map')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3' +
+        '.0/css/roboto.min.css')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3' +
+        '.0/css/roboto.min.css.map')
+        link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/hover.css/2.0.2/css/hover-min.css')
+        link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.6/animate.min.css')
         link(rel='stylesheet', href='/stylesheets/style.css')
     body
-        include header
-        include tabs
-        #content
-            block content
-        include footer
+        #page-wrap
+            include header
+            include tabs
+            #content
+                block content
+            include footer
 
-        script(type='text/javascript', src='/bower_components/jquery/dist/jquery.js')
-        script(type='text/javascript', src='/bower_components/bootstrap/dist/js/bootstrap.js')
-        script(type='text/javascript', src='/bower_components/bootstrap-material-design/dist/js/material.js')
-        script(type='text/javascript', src='/bower_components/bootstrap-material-design/dist/js/ripples.js')
-        script(type='text/javascript', src='/bower_components/jquery.tablesorter/dist/js/jquery.tablesorter.js')
+        //
+            script(type='text/javascript', src='/bower_components/jquery/dist/jquery.js')
+            script(type='text/javascript', src='/bower_components/bootstrap/dist/js/bootstrap.js')
+            script(type='text/javascript', src='/bower_components/bootstrap-material-design/dist/js/material.js')
+            script(type='text/javascript', src='/bower_components/bootstrap-material-design/dist/js/ripples.js')
+            script(type='text/javascript', src='/bower_components/jquery.tablesorter/dist/js/jquery.tablesorter.js')
+            script(type='text/javascript', src='/javascripts/main.js')
+        script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+        script(type='text/javascript', src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js')
+        script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3' +
+        '.0/js/material.min.js')
+        script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3' +
+        '.0/js/material.min.js.map')
+        script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3' +
+        '.0/js/ripples.min.js')
+        script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3' +
+        '.0/js/ripples.min.js.map')
+        script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.21' +
+        '.5/js/jquery.tablesorter.min.js')
         script(type='text/javascript', src='/javascripts/main.js')
         block script
