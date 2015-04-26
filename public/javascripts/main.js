@@ -8,6 +8,7 @@ $(function () {
     });
     Ui.setHeaderBackground(Ui.getFirstPath());
     Ui.setActiveTab(Ui.getFirstPath());
+    Ui.setRowBackground(Ui.getFirstPath());
     $.material.ripples();
 });
 
@@ -32,4 +33,17 @@ Ui.setHeaderBackground = function(first) {
 
 Ui.setActiveTab = function(first) {
     if (first.length > 0) $('.nav-tabs a[href^="/' + first + '"]').addClass('active');
+};
+
+Ui.setRowBackground = function (first) {
+    if (first == 'england' || first == 'spain' || first == 'germany') {
+        $('.league-table tbody tr:lt(3)').addClass('promo');
+        $('.league-table tbody tr:nth-of-type(4)').addClass('pplay');
+        $('.league-table tbody tr:nth-of-type(5)').addClass('europa');
+        $('.league-table tbody tr:nth-of-type(6)').addClass('europa');
+        $('.league-table tbody tr:gt(-4)').addClass('releg');
+        if (first == 'germany') {
+            $('.league-table tbody tr:nth-of-type(16)').removeClass('releg').addClass('rplay');
+        }
+    }
 };
