@@ -6,14 +6,6 @@ router.get('/', function(req, res) {
   res.render('index', { title: 'fctable' });
 });
 
-router.get('/about', function(req, res) {
-  res.render('about');
-});
-
-router.get('/contact', function(req, res) {
-  res.render('contact');
-});
-
 router.get('/england/1', function (req, res) {
   var db = req.db;
   var collection = db.get('england1');
@@ -72,6 +64,14 @@ router.get('/portugal/1', function (req, res) {
       "portugal1": docs
     });
   });
+});
+
+router.get('/about', function(req, res) {
+  res.render('static/about', { title: 'fctable' });
+});
+
+router.get('/contact', function(req, res) {
+  res.render('static/contact');
 });
 
 module.exports = router;
