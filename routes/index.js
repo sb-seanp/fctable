@@ -6,6 +6,10 @@ router.get('/', function(req, res) {
   res.render('index', { title: 'fctable' });
 });
 
+router.get('/about', function(req, res) {
+  res.render('static/about', { title: 'fctable' });
+});
+
 router.get('/england/1', function (req, res) {
   var db = req.db;
   var collection = db.get('england1');
