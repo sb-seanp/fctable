@@ -22,8 +22,14 @@ white       = #f2f2f2
 pearl       = #edecec
 
 // UNIVERSAL
-body, html
+html
+  min-height 100%
+  position relative
+
+body
+  margin 0 0 48px
   font-size 16px
+  font-weight 500
   height 100%
   font-family Roboto, RobotoDraft, 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
   background-color pearl
@@ -98,8 +104,12 @@ nav
 // CONTENT
 #content
   position relative
-  top 108px
+  margin-top 108px
   margin-bottom 158px
+
+#harder-stadium
+  width 100%
+  box-shadow 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 .league-container
   max-width 860px
@@ -126,10 +136,11 @@ nav
 // FOOTER
 footer
   background-color dark_red
-  position relative
+  position absolute
+  left 0
+  bottom 0
   width 100%
   height 48px
-  bottom -108px
   box-shadow 0 -2px 8px 0 rgba(0, 0, 0, 0.2), 0 -6px 20px 0 rgba(0, 0, 0, 0.19);
   & p
     text-align center
