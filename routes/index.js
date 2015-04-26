@@ -7,11 +7,11 @@ router.get('/', function(req, res) {
 });
 
 router.get('/about', function(req, res) {
-  res.render('static/about', { title: 'fctable' });
+  res.render('pages/about', { title: 'fctable' });
 });
 
 router.get('/contact', function(req, res) {
-  res.render('static/contact');
+  res.render('pages/contact');
 });
 
 router.get('/england/1', function (req, res) {
