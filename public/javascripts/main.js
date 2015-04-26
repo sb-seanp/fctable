@@ -46,4 +46,18 @@ Ui.setRowBackground = function (first) {
             $('.league-table tbody tr:nth-of-type(16)').removeClass('releg').addClass('rplay');
         }
     }
+    else if (first == 'italy' || first == 'france' || 'portugal') {
+        $('.league-table tbody tr:lt(2)').addClass('promo');
+        $('.league-table tbody tr:nth-of-type(3)').addClass('pplay');
+        $('.league-table tbody tr:nth-of-type(4)').addClass('europa');
+        $('.league-table tbody tr:nth-of-type(5)').addClass('europa');
+        $('.league-table tbody tr:gt(-4)').addClass('releg');
+        if (first == 'france') {
+            $('.league-table tbody tr:nth-of-type(5)').removeClass('europa');
+        }
+        if (first == 'portugal') {
+            $('.league-table tbody tr:nth-of-type(16)').removeClass('releg');
+        }
+    }
+    else{}
 };
