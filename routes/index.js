@@ -74,4 +74,8 @@ router.get('/contact', function(req, res) {
   res.render('static/contact');
 });
 
+router.get('/dependencies', function(req, res) {
+  res.render('static/dependencies');
+});
+
 module.exports = router;
