@@ -37,27 +37,27 @@ Ui.setActiveTab = function(first) {
 
 Ui.setRowBackground = function (first) {
     if (first == 'england' || first == 'spain' || first == 'germany') {
-        $('.league-table tbody tr:lt(3)').addClass('promo');
-        $('.league-table tbody tr:nth-of-type(4)').addClass('pplay');
-        $('.league-table tbody tr:nth-of-type(5)').addClass('europa');
-        $('.league-table tbody tr:nth-of-type(6)').addClass('europa');
-        $('.league-table tbody tr:gt(-4)').addClass('releg');
+        $('.league-table tbody tr:lt(3)').removeClass('reg-row').addClass('promo');
+        $('.league-table tbody tr:nth-of-type(4)').removeClass('reg-row').addClass('pplay');
+        $('.league-table tbody tr:nth-of-type(5)').removeClass('reg-row').addClass('europa');
+        $('.league-table tbody tr:nth-of-type(6)').removeClass('reg-row').addClass('europa');
+        $('.league-table tbody tr:gt(-4)').removeClass('reg-row').addClass('releg');
         if (first == 'germany') {
             $('.league-table tbody tr:nth-of-type(16)').removeClass('releg').addClass('rplay');
         }
     }
     else if (first == 'italy' || first == 'france' || 'portugal') {
-        $('.league-table tbody tr:lt(2)').addClass('promo');
-        $('.league-table tbody tr:nth-of-type(3)').addClass('pplay');
-        $('.league-table tbody tr:nth-of-type(4)').addClass('europa');
-        $('.league-table tbody tr:nth-of-type(5)').addClass('europa');
-        $('.league-table tbody tr:gt(-4)').addClass('releg');
+        $('.league-table tbody tr:lt(2)').removeClass('reg-row').addClass('promo');
+        $('.league-table tbody tr:nth-of-type(3)').removeClass('reg-row').addClass('pplay');
+        $('.league-table tbody tr:nth-of-type(4)').removeClass('reg-row').addClass('europa');
+        $('.league-table tbody tr:nth-of-type(5)').removeClass('reg-row').addClass('europa');
+        $('.league-table tbody tr:gt(-4)').removeClass('reg-row').addClass('releg');
         if (first == 'france') {
-            $('.league-table tbody tr:nth-of-type(5)').removeClass('europa');
+            $('.league-table tbody tr:nth-of-type(5)').removeClass('europa').addClass('reg-row');
         }
         if (first == 'portugal') {
-            $('.league-table tbody tr:nth-of-type(16)').removeClass('releg');
+            $('.league-table tbody tr:nth-of-type(16)').removeClass('releg').addClass('reg-row');
         }
     }
-    else{}
+    else {}
 };
