@@ -2,20 +2,30 @@
  * Created by Sean on 4/24/2015.
  */
 
+var HEADER_HEIGHT = 216;
+
 $(function () {
     $(".league-table").tablesorter({
         sortList: [[0, 0]]
     });
     Ui.setHeaderBackground(Ui.getFirstPath());
     Ui.setActiveTab(Ui.getFirstPath());
-    Ui.setRowBackground(Ui.getFirstPath());
+    //Ui.setRowBackground(Ui.getFirstPath());
+    Navigate.gotoTable();
+    Navigate.gotoTop();
     $.material.ripples();
+    new WOW().init();
 });
 
 function Ui() {
     this.getFirstPath();
     this.setHeaderBackground();
     this.setActiveTab();
+}
+
+function Navigate() {
+    this.gotoTable();
+    this.gotoTop();
 }
 
 Ui.getFirstPath = function() {
@@ -60,4 +70,20 @@ Ui.setRowBackground = function (first) {
         }
     }
     else {}
+};
+
+Navigate.gotoTable = function () {
+    $("#fab-ha").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#ha-table").offset().top - HEADER_HEIGHT
+        }, 1000);
+    });
+};
+
+Navigate.gotoTop = function () {
+    $('#fab-top').click(function(){
+        $('html, body').animate({
+            scrollTop: 0
+        }, 1000);
+    });
 };

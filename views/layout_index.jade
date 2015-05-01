@@ -31,21 +31,27 @@ html
         link(rel='stylesheet', href='/stylesheets/mfb.css')
         link(rel='stylesheet', href='/stylesheets/style.css')
         script.
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q || []).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                            (i[r].q = i[r].q || []).push(arguments)
+                        }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
             ga('create', 'UA-62294529-1', 'auto');
             ga('send', 'pageview');
     body
         #page-wrap
             include header
-            include tabs
+            include tabs_index
             //include fab
             #content
                 block content
             include footer
-
         //
             script(type='text/javascript', src='/bower_components/jquery/dist/jquery.js')
             script(type='text/javascript', src='/bower_components/bootstrap/dist/js/bootstrap.js')
@@ -54,10 +60,17 @@ html
             script(type='text/javascript', src='/bower_components/jquery.tablesorter/dist/js/jquery.tablesorter.js')
             script(type='text/javascript', src='/javascripts/main.js')
         script.
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q || []).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                            (i[r].q = i[r].q || []).push(arguments)
+                        }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
             ga('create', 'UA-62294529-1', 'auto');
             ga('send', 'pageview');
         script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')

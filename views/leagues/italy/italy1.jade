@@ -29,3 +29,39 @@ block content
                         td #{club.gag}
                         td #{club.gd}
                         td #{club.points}
+
+    .well.league-container.animated.fadeInUp.wow
+        h2 Home and Away
+        hr
+        table.table.table-striped.table-hover.league-table#ha-table
+            thead
+                tr
+                    th Pos
+                    th Club
+                    th Played
+                    th HW
+                    th HD
+                    th HL
+                    th HFor
+                    th HAg
+                    th AW
+                    th AD
+                    th AL
+                    th AFor
+                    th AAg
+            tbody
+                each club, i in italy1
+                    tr.reg-row
+                        td: b #{club.pos}
+                        td #{club._id}
+                        td #{club.played}
+                        td #{club.winsh}
+                        td #{club.drawsh}
+                        td #{club.lossesh}
+                        td #{club.gforh}
+                        td #{club.gagh}
+                        td #{club.winsa}
+                        td #{club.drawsa}
+                        td #{club.lossesa}
+                        td #{club.gfora}
+                        td #{club.gaga}
