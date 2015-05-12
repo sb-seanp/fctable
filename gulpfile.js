@@ -2,6 +2,10 @@ var gulp        = require('gulp'),
     server      = require('gulp-express'),
     jade        = require('gulp-jade'),
     stylus      = require('gulp-stylus'),
+    browserify  = require('browserify'),
+    source      = require('vinyl-source-stream'),
+    buffer      = require('vinyl-buffer'),
+    uglify      = require('gulp-uglify'),
     nib         = require('nib'),
     jshint      = require('gulp-jshint'),
     stylish     = require('jshint-stylish'),
@@ -12,6 +16,16 @@ gulp.task('lint', function(){
     gulp.src('public/javascripts/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter(stylish));
+});
+
+// Bundle javascript
+gulp.task('bundle', function () {
+    var bundle = browserify({ entries: ['./public/javascripts/main.js'] })
+        .bundle()
+        .pipe(source('fctable.js'))
+        .pipe(buffer())
+        .pipe(uglify())
+        .pipe(gulp.dest('public/javascripts/'))
 });
 
 // Compile Stylus stylesheets
@@ -41,7 +55,7 @@ gulp.task('server', function(){
     gulp.watch('views/*.jade', ['jade']);
 });
 
-gulp.task('deploy', ['lint', 'stylus', 'jade']);
+gulp.task('deploy', ['lint', 'bundle', 'stylus', 'jade']);
 
 // Default task
-gulp.task('default', ['lint', 'stylus', 'jade', 'server']);
+gulp.task('default', ['lint', 'bundle', 'stylus', 'jade', 'server']);
